@@ -714,6 +714,7 @@ input:focus {
       color: #1cc3b2; }
 
 /* :: 8.0 Hero Area CSS */
+
 .welcome-area {
   position: relative;
   z-index: 1; }
@@ -1792,7 +1793,7 @@ html .ui-button.ui-state-disabled:active {
 
 .roberto-about-area {
   position: relative;
-  z-index: 1; }
+  z-index:-3 }
   .roberto-about-area .hotel-search-form-area {
     position: absolute;
     width: 100%;
@@ -1867,7 +1868,12 @@ html .ui-button.ui-state-disabled:active {
   .roberto-contact-form textarea.form-control {
     height: 150px;
     padding: 20px; }
-
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .google-maps-contact-info {
   position: relative;
   z-index: 1;

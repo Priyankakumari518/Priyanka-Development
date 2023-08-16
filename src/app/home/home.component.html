@@ -1,6 +1,6 @@
-<section class="welcome-area">
+<!-- <section class="welcome-area">
    
-    <!-- <div class="welcome-slides owl-carousel"> -->
+     <div class="welcome-slides owl-carousel"> 
         <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(assets/img/bg-img/16.jpg);" data-img-url="assets/img/bg-img/16.jpg">
             <div class="welcome-content h-100">
                 <div class="container h-100">
@@ -51,9 +51,50 @@
                 </div>
             </div>
         </div>
-    <!-- </div> -->
-</section>
+    </div>
 
+</section>  -->
+<section class="owl-carousel-banner">
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      
+                    <div class="slide-carousel-welcome">
+                        <img src="assets/img/bg-img/16.jpg"  alt="img 1" />
+                      </div>
+                      <div id="overlay">
+                        <h6  id =title-owl>Avila Tours &amp; Travels Pvt LtdS</h6>
+                        <br>
+                        <h2 id =slide-text-owl>Travel in ease, at peace</h2><br/>
+                       <button class="btn btn-slide-owl"  routerLink="Contact-us">Contact Us</button>
+                       </div>
+                         
+                
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide-carousel-welcome">
+        <img src="assets/img/bg-img/7.jpg" alt="img 2" />
+      </div>
+      <div id="overlay-slder-2">
+        <h6 id="avila-tour">Avila Tours &amp; Travels Pvt Ltd</h6>
+        <h2 id="avila-advisor">Travel advisors with two <br> decades of experience at your <br> service 24/7</h2>
+        <button class="btn-2 btn-slide-owl-2"  routerLink="Contact-us">Contact Us</button>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide-carousel-welcome">
+        <img src="assets/img/bg-img/18.jpg" alt="img 3" />
+      </div>
+      <div id="overlay-slder-3">
+        <h6  id="avila-pvt">Avila Tours &amp; Travels Pvt Ltd</h6>
+        <h2 id="avila-plan">Travel plans crafted and <br> customised down to the last <br> detail for you</h2>
+        <button class="btn-3 btn-slide-owl-3"  routerLink="Contact-us">Contact Us</button>
+    
+      </div>
+    </ng-template>
+    
+  </owl-carousel-o>
+
+</section>
 
 <section class="roberto-about-area section-padding-100-0">
 

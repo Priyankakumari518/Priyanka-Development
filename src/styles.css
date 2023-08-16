@@ -1,1 +1,197 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.owl-carousel-banner{
+    position: relative;
+}
+.owl-carousel .owl-item img{
+    display:block;
+    height:580px;
+    width: 1400px;
+}
+ .owl-carousel-banner .owl-prev, .owl-carousel-banner .owl-next{
+    height: 110px;
+    width: 110px;
+ position: absolute;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ overflow:hidden;
+ background: transparent!important;
+ transition: .3s all ease;
+
+}
+.owl-carousel-banner .owl-prev{
+left: 0;
+}
+.owl-carousel-banner .owl-next{
+  right: -60px ;  
+    
+}
+.owl-carousel-banner .owl-prev::before, .owl-carousel-banner .owl-next::before{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    background: #71727024;
+    border-radius: 50%;
+    content: '';
+}
+.owl-carousel-banner .owl-prev::before{
+left:50px;
+}
+.owl-carousel-banner .owl-next::before{
+right: -106px;
+}
+.owl-carousel-banner .owl-prev i, .owl-carousel-banner .owl-next i{
+font-size: 20px;
+position: absolute;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+.owl-carousel-banner .owl-next i{
+    right: 0%;
+    
+}
+.owl-carousel-banner .owl-prev:hover::before , .owl-carousel-banner .owl-next:hover::before{
+    background:#1cc3b2;
+     
+}
+.owl-carousel-banner .owl-next .fa-arrow-right{
+}
+.owl-carousel-banner .owl-prev i{
+    left:60%
+}
+#overlay{
+height: 100%;
+width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color:rgba(0,0,0,0.4);
+     justify-content: center;
+    align-content: center;
+}
+ #title-owl{
+color: white;
+font-size: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding-left: 430px;
+padding-top: 200px ;
+
+}
+#slide-text-owl{
+color: white;
+font-size: 60px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding-left: 300px;
+
+}
+#overlay .btn-slide-owl{
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 540px;
+    text-align: center;
+}
+#overlay-slder-2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color:rgba(0,0,0,0.4);
+     justify-content: center;
+    align-content: center;
+}
+#avila-tour{
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+     padding-left: 430px;
+    padding-top: 130px ;
+
+}
+#avila-advisor{
+    color: white;
+    font-size: 70px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     padding-left: 40px;
+     word-spacing: 2px;
+    line-height: 70px;
+    text-align: center;
+}
+#overlay-slder-2 .abtn-slide-owl-2{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+     text-align:center ;
+}
+#overlay-slder-3{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color:rgba(0,0,0,0.4);
+     justify-content: center;
+    align-content: center;
+}
+#avila-pvt{
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+     padding-left: 430px;
+    padding-top: 130px ;
+}
+#avila-plan{
+    color: white;
+    font-size: 70px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     padding-left: 80px;
+     word-spacing: 2px;
+     text-align: center;
+    line-height: 70px;
+}
+#overlay-slder-3 .btn-slide-owl-3{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+        
+      /* @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .slide-carousel-welcome {
+          height: 580px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .slide-carousel-welcome {
+          height: 580px; } }
+      @media only screen and (max-width: 767px) {
+        .slide-carousel-welcome {
+          height: 580px; } } */
+
+#overlay .btn{
+   border: 2px solid rgb(9, 180, 46);
+    
+}
+#overlay-slder-2 .btn-2{
+    border: 2px solid rgb(9, 180, 46); 
+    background-color: transparent;
+    margin-left: 590px; 
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    border-radius: 6px;
+    color:white ;
+}
+#overlay-slder-3 .btn-3{
+    border: 2px solid rgb(9, 180, 46);
+    background-color: transparent;
+    margin-left: 590px; 
+    font-size: 20px;
+    height: 50px;
+    width: 120px;
+    border-radius: 6px;
+}

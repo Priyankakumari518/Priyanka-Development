@@ -15,14 +15,11 @@
         </div>
     </div>
 </div>
-
-
 <section class="google-maps-contact-info">
     <div class="container-fluid">
         <div class="google-maps-contact-content">
             <div class="row">
                 <div class="col-12">
-
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
                         <h6>Contact Us</h6>
                     </div>
@@ -64,42 +61,60 @@
                             Hyderabad, Telangana.
                         </p>
                     </div>
-                </div>
-
-
-
-
-            </div>
-            <div class="container">
-                <div class="row">
+                </div> 
+            </div>            
+            <div  class="container">
+                <div  class="row">
                     <div class="col-12">
-
                         <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
                             <!--<h6>Contact Us</h6>-->
                             <h2>Leave Message</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div [formGroup]="form" class="row">
                     <div class="col-12">
-
                         <div class="roberto-contact-form">
-                            <form action="#" method="post">
+                            <form action="javascript:void(0)"  (submit)="send()">
                                 <div class="row">
                                     <div class="col-12 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                                        <input type="text" name="message-name" id="name"    class="form-control mb-30" placeholder="Your Name" required>
+                                        <input type="text" formControlName="from_name" name="from_name" id="from_name"  class="form-control mb-30" placeholder="Your Name" autocomplete="off" required>
+                                        <!-- <span style="color:red" ng-show="form.from_name.$dirty && form.from_name.$invalid"> </span>
+                                            <span ng-show="form.from_name.$error.required">Name Is Requred</span> -->
+                                            <div *ngIf="form.controls['from_name'].invalid && (form.controls['from_name'].dirty || form.controls['from_name'].touched)" class="alert alert-danger">
+                                                <div *ngIf="form.controls['from_name'].errors">
+                                                Name is required.
+                                              </div>
+                                            </div>    
+                                            
                                     </div>
                                     <div class="col-12 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                                        <input type="number" name="message-mobile" class="form-control mb-30" placeholder="Your Mobile" required>
+                                        <input type="number" formControlName="mobile" name="number" id="mobile" maxlength="10" class="form-control mb-30" placeholder="Your Mobile" autocomplete="off" required>
+                                        <div *ngIf="form.controls['mobile'].invalid && (form.controls['mobile'].dirty || form.controls['mobile'].touched)" class="alert alert-danger">
+                                            <div *ngIf="form.controls['mobile'].errors">
+                                            Mobile number is required.
+                                            
+                                          </div>
+                                        </div> 
                                     </div>
                                     <div class="col-12 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                                        <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email" required>
+                                        <input type="email" formControlName="from_email" name="from_email" id="from_email" class="form-control mb-30" placeholder="Your Email" autocomplete="off" required>
+                                        <div *ngIf="form.controls['from_email'].invalid && (form.controls['from_email'].dirty || form.controls['from_email'].touched)" class="alert alert-danger">
+                                            <div *ngIf="form.controls['from_email'].errors">
+                                            Email is required.
+                                          </div>
+                                        </div> 
                                     </div>
                                     <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
-                                        <textarea name="message" class="form-control mb-30" placeholder="Your Message" required></textarea>
+                                        <textarea name="message" id="message" formControlName="message" class="form-control mb-30" placeholder="Your Message" autocomplete="off" required></textarea>
+                                        <!-- <div *ngIf="form.controls['message'].invalid && (form.controls['message'].dirty || form.controls['message'].touched)" class="alert alert-danger">
+                                            <div *ngIf="form.controls['message'].errors">
+                                            Message is required.
+                                          </div>
+                                        </div>  -->
                                     </div>
                                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
-                                        <button type="submit" class="btn roberto-btn mt-15">Send Message</button>
+                                        <button type="submit" [disabled]="!form.valid" class="btn roberto-btn mt-15">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -108,8 +123,7 @@
                 </div>
             </div>
             <br />
-            <div class="google-maps">
-                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898083.9135270757!2d73.5666135125!3d17.425096600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972d3519ebe7%3A0x28b8ae147ab2f496!2sAvila%20International%20Tours%20and%20Travels!5e0!3m2!1sen!2sin!4v1686059122575!5m2!1sen!2sin" allowfullscreen></iframe>-->
+            <div class="google-maps"> 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5385.58488618542!2d78.44140191565573!3d17.42504093924369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972d3519ebe7%3A0x28b8ae147ab2f496!2sAvila%20International%20Tours%20and%20Travels!5e0!3m2!1sen!2sin!4v1687079635984!5m2!1sen!2sin" allowfullscreen></iframe>
             </div>
         </div>
